@@ -2,26 +2,21 @@
   "name": "@boujan/hooks",
   "version": "0.1.0",
   "description": "A lightweight, modern collection of React hooks by Boujan.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./*": {
-      "import": "./dist/*.esm.js",
-      "require": "./dist/*.cjs.js",
-      "types": "./dist/*.d.ts"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup",
     "test": "vitest run",
     "dev:test": "vitest",
     "lint": "eslint src --ext .ts,.tsx"
